@@ -5,17 +5,30 @@
  */
 package primermongoapp;
 
+import com.mongodb.DB;
+import com.mongodb.MongoClient;
+import com.mongodb.MongoClient;
+import com.mongodb.client.MongoDatabase;
+import com.mongodb.client.MongoIterable;
+
 /**
  *
  * @author Laboratorios
  */
 public class PrimerMongoApp {
 
-    /**
-     * @param args the command line arguments
-     */
+    private final static String HOST = "localhost";
+    private final static int PORT = 27017;
+
     public static void main(String[] args) {
-        // TODO code application logic here
+        try {
+            MongoClient mongoClient = new MongoClient(HOST, PORT);
+            // Now connect to the test database      
+            MongoDatabase db = mongoClient.getDatabase("test");
+            System.out.println("Connect to database successfully ");
+        } catch (Exception e) {
+            System.err.println(e.getClass().getName() + ": " + e.getMessage());
+        }
     }
-    
+
 }
