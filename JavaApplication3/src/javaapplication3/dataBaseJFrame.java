@@ -5,8 +5,6 @@
  */
 package javaapplication3;
 
-import com.sun.org.apache.bcel.internal.generic.AALOAD;
-
 /**
  *
  * @author Laboratorios
