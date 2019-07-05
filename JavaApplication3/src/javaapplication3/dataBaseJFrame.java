@@ -16,9 +16,12 @@ public class dataBaseJFrame extends javax.swing.JFrame {
     /**
      * Creates new form dataBaseJFrame
      */
+    DataBase dataBase;
+    
     public dataBaseJFrame() {
         initComponents();
-        DataBase dataBase = new DataBase();
+        dataBase = new DataBase();
+        jComboBox1 = dataBase.getDataBaseList();
     }
 
     /**
@@ -82,7 +85,7 @@ public class dataBaseJFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
-        dataBase.
+      
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
     /**
