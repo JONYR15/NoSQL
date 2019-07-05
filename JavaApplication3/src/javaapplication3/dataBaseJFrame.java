@@ -21,7 +21,13 @@ public class dataBaseJFrame extends javax.swing.JFrame {
     public dataBaseJFrame() {
         initComponents();
         dataBase = new DataBase();
-        jComboBox1 = new JComboBox<String>(dataBase.getDataBaseList().toArray(new String[dataBase.getDataBaseList().size()]));
+        cargaDataBase();
+    }
+
+    public void cargaDataBase() {
+        for (String item : dataBase.getDataBaseList()) {
+            jComboBox1.addItem(item);
+        }
     }
 
     /**
